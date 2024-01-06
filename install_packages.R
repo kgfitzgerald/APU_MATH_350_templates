@@ -1,0 +1,5 @@
+install.packages("tidyverse")
+install.packages("janitor")
+install.packages("ggridges")
+install.packages("infer")
+install.packages("broom")

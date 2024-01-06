@@ -35,7 +35,6 @@ Complete the following exercises:
 
 library(tidyverse)
 library(janitor)
-library(ggridges)
 library(infer)
 library(broom)
 ```
