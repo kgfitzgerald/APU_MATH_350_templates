@@ -1,0 +1,259 @@
+---
+title: "AE-CH2"
+author: "Your Name Here"
+format: 
+  html:
+    self-contained: true
+    toc: true
+    toc_float: true
+    number_section: false
+    highlight: "tango"
+    theme: "cosmo"
+    df-print: paged
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+This Application Exercise walks through the guided activities in Chapter 2 of the textbook. There are spaces for you to answer each question (with code and/or text). Feel free to also use this document to add your own notes along the way. 
+
+```{r}
+#| label: load-packages
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(janitor)
+library(ggridges)
+library(infer)
+library(broom)
+```
+
+```{r}
+#| label: load-data
+#| message: false
+#| warning: false
+
+games1 <- read_csv("./data/C2 Games1.csv") %>% 
+  clean_names()
+```
+
+### Question 1
+
+> YOUR ANSWER HERE
+
+### Question 2
+
+> YOUR ANSWER HERE
+
+### Question 3
+
+> YOUR ANSWER HERE
+
+### Question 4
+
+```{r boxplot}
+ggplot(games1, aes(y = time, x = type)) +
+  geom_boxplot()
+```
+
+> YOUR ANSWER HERE
+
+```{r summary-stats}
+games1 %>% 
+  group_by(type) %>% 
+  summarize(ybar = mean(time),
+            s = sd(time))
+```
+
+[Skip Q5 & Q6]
+
+### Question 7
+
+```{r}
+#compute residuals
+games1 <- games1 %>% 
+  group_by(type) %>% 
+  mutate(ybar = mean(time),
+         residual = time - ybar)
+
+#histogram of residuals
+
+  
+```
+
+> YOUR ANSWER HERE
+
+### Question 8
+
+```{r}
+#informal test of equal variance
+
+#create data for group 1
+data1 <- games1 %>% filter(type == "Color")
+#compute s1
+s1 <- sd(data1$time)
+
+#create data for group 2
+
+#compute s2
+
+#informal test
+
+```
+
+> YOUR ANSWER HERE
+
+### Question 9
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+### Question 10
+
+```{r}
+t_test(games1, response = time, 
+       explanatory = type)
+```
+
+> YOUR ANSWER HERE
+
+### Question 11
+
+```{r}
+games1 <- games1 %>% 
+  mutate(type_recoded = factor(type, 
+                       levels = c("Standard",
+                                  "Color")))
+m1 <- lm(time ~ type_recoded, data = games1)
+tidy(m1)
+```
+
+### Question 12
+
+```{r}
+confint(m1)
+```
+
+> YOUR ANSWER HERE
+
+### Question 13
+
+```{r}
+
+m2 <- lm(time ~ type, data = games1)
+tidy(m2)
+confint(m2)
+```
+
+> YOUR ANSWER HERE
+
+### Question 14
+
+```{r}
+#create augmented dataset with residuals
+m1_aug <- augment(m1)
+#add student id variable back in
+m1_aug$student_id <- games1$student_id
+
+ggplot(m1_aug, aes(x = .resid)) +
+  geom_histogram(binwidth = 2, color = "white")
+
+ggplot(m1_aug, aes(x = student_id, y = .resid)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+> YOUR ANSWER HERE
+
+### Question 15
+
+```{r}
+games1 <- games1 %>% 
+  mutate(type_01 = if_else(type == "Color", 1, 0))
+
+ggplot(games1, aes(y = time, x = type_01)) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_point()
+tidy(m1)
+```
+
+> YOUR ANSWER HERE
+
+### Question 16
+
+> YOUR ANSWER HERE
+
+### Question 17
+
+> YOUR ANSWER HERE
+
+### Question 18
+
+> YOUR ANSWER HERE
+
+### Question 19
+
+```{r}
+#compute grand mean
+grand_mean <- mean(games1$time)
+
+#compute mean for group 1 (color)
+ybar1dot <- mean(data1$time)
+
+#compute mean for group 2 (standard)
+```
+
+### Question 20
+
+```{r}
+#effect size color 
+
+
+#effect size standard
+
+```
+
+### COMPARE RESIDUALS
+
+```{r}
+#compute residuals for regression model
+#store as new variable res_reg in games1 dataset
+# do same for ANOVA residuals, call res_aov
+
+
+
+```
+
+
+### Question 23
+
+```{r}
+aov_m1 <- anova(m1)
+tidy(aov_m1)
+```
+
+> YOUR ANSWER HERE
+
+### Question 24
+
+> YOUR ANSWER HERE
+
+### Question 25
+
+> YOUR ANSWER HERE
+
+### Question 26
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+### Question 27
+
+> YOUR ANSWER HERE
