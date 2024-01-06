@@ -206,3 +206,21 @@ weights <- read_csv("./data/C2 Weights.csv") %>%
 ```
 
 [skip part d]
+
+## Reflection prompts
+
+*Respond to each of the following after you have completed all exercises in this assignment*
+
+*(RP1): What were the main concepts covered in this assignment?*
+
+> YOUR ANSWER HERE
+
+*(RP2): What's one thing you understand better after completing these exercises?*
+
+> YOUR ANSWER HERE
+
+*(RP3): What exercise(s) gave you the most trouble? What was difficult about them/where did you get stuck?*
+
+> YOUR ANSWER HERE
+
+
