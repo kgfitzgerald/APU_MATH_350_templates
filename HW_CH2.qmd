@@ -1,0 +1,208 @@
+---
+title: "Homework Chapter 2"
+author: "Your Name Here"
+format: 
+  html:
+    self-contained: true
+    toc: true
+    toc_float: true
+    number_section: false
+    highlight: "tango"
+    theme: "cosmo"
+    df-print: paged
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## Instructions
+
+This Homework comes from Chapter 2 of the Textbook. You should refer to AE_CH2 for some template code.
+
+Complete the following exercises:
+
++ E.2
++ E.4
++ E.6
++ E.7
++ E.8
++ E.13 (skip part d)
+
+```{r}
+#| label: load-packages
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(janitor)
+library(ggridges)
+library(infer)
+library(broom)
+```
+
+
+## E.2
+
+> YOUR ANSWER HERE
+
+## E.4
+
+> YOUR ANSWER HERE
+
+## E.6
+
+```{r}
+#| label: load-data2
+#| message: false
+#| warning: false
+
+games2 <- read_csv("./data/C2 Games2.csv") %>% 
+  clean_names()
+```
+
+### Part a
+
+```{r}
+#plot the data
+
+```
+
+> YOUR ANSWER HERE
+
+### Part b
+
+```{r}
+#conduct ANOVA
+
+```
+
+> YOUR ANSWER HERE
+
+### Part c
+
+```{r}
+#residual plot
+
+```
+
+> YOUR ANSWER HERE
+
+### Part d
+
+> YOUR ANSWER HERE
+
+### Part e
+
+> YOUR ANSWER HERE
+
+## E.7
+
+### Part a
+
+> YOUR ANSWER HERE
+
+### Part b
+
+```{r}
+#graph data
+```
+
+> YOUR ANSWER HERE
+
+### Part c
+
+```{r}
+#conduct ANOVA
+```
+
+> YOUR ANSWER HERE
+
+### Part d
+
+```{r}
+#show equal variance violated
+
+#create variable for log(Strength). Note, by default in R, log() computes the natural log
+
+#conduct ANOVA with log(Strength) as outcome
+
+
+```
+
+> YOUR ANSWER HERE
+
+### Part e
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+### Part f
+
+> YOUR ANSWER HERE
+
+### Part g
+
+> YOUR ANSWER HERE
+
+## E.8
+
+### Part a
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+### Part b
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+### Part c
+
+> YOUR ANSWER HERE
+
+### Part d
+
+> YOUR ANSWER HERE
+
+## E.13
+
+[Read Section 2.9 before completing this exercise]
+
+```{r}
+#| label: load-data3
+#| message: false
+#| warning: false
+
+weights <- read_csv("./data/C2 Weights.csv") %>% 
+  clean_names()
+```
+
+### Part a
+
+```{r}
+
+```
+
+
+### Part b
+
+```{r}
+
+```
+
+### Part c
+
+```{r}
+
+```
+
+[skip part d]
