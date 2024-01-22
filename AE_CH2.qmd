@@ -15,7 +15,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-This Application Exercise walks through the guided activities in Chapter 2 of the textbook. There are spaces for you to answer each question (with code and/or text). Feel free to also use this document to add your own notes along the way. 
+This Application Exercise walks through the guided activities in Chapter 2 of the textbook. There are spaces for you to answer each question (with code and/or text). Feel free to also use this document to add your own notes along the way.
 
 ```{r}
 #| label: load-packages
@@ -66,7 +66,7 @@ games1 %>%
             s = sd(time))
 ```
 
-[Skip Q5 & Q6]
+\[Skip Q5 & Q6\]
 
 ### Question 7
 
@@ -227,7 +227,6 @@ ybar1dot <- mean(data1$time)
 
 
 ```
-
 
 ### Question 23
 

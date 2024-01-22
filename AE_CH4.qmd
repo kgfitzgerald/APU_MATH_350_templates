@@ -1,0 +1,175 @@
+---
+title: "AE-CH4"
+author: "Your Name Here"
+format: 
+  html:
+    self-contained: true
+    toc: true
+    toc_float: true
+    number_section: false
+    highlight: "tango"
+    theme: "cosmo"
+    df-print: paged
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+This Application Exercise walks through the guided activities in Chapter 4 of the textbook. There are spaces for you to answer each question (with code and/or text). Feel free to also use this document to add your own notes along the way.
+
+```{r}
+#| label: load-packages
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(janitor)
+library(broom)
+```
+
+```{r}
+#| label: load-data
+#| message: false
+#| warning: false
+
+popcorn <- read_csv("./data/C4 Popcorn.csv") %>% 
+  clean_names()
+```
+
+## Question 1
+
+*Don't need to list them out*
+
+> YOUR ANSWER HERE
+
+## Question 2
+
+> YOUR ANSWER HERE
+
+## Question 3
+
+> YOUR ANSWER HERE
+
+## Question 4
+
+```{r}
+
+```
+
+## Question 5
+
+```{r}
+
+```
+
+## Question 6
+
+*Hint: see Table 4.3*
+
+> YOUR ANSWER HERE
+
+## Questions 8 - 10
+
+[Already completed for you]. The following code calculates the three measures of between-group variability (MSBrand, MSTime, MSBrandTime), and the within-group variability MSE. See Equations 4.1 - 4.4.
+
+```{r}
+popcorn %>% 
+  mutate(ybar_grand = mean(pop_rate)) -> popcorn
+
+#MSBrand - see equation 4.1
+popcorn %>% 
+  group_by(brand, ybar_grand) %>% 
+  summarize(n_brand = n(),
+         ybar_brand = mean(pop_rate)) %>% 
+  mutate(term  = n_brand*(ybar_brand - ybar_grand)^2) %>% 
+  ungroup() %>% 
+  summarize(MSBrand = sum(term)/(2-1)) %>% 
+  pull(MSBrand) -> MSBrand
+MSBrand
+
+#MSTime - see equation 4.2
+popcorn %>% 
+  group_by(time, ybar_grand) %>% 
+  summarize(n_time = n(),
+         ybar_time = mean(pop_rate)) %>% 
+  mutate(term  = n_time*(ybar_time - ybar_grand)^2) %>% 
+  ungroup() %>% 
+  summarize(MSTime = sum(term)/(2-1)) %>% 
+  pull(MSTime) -> MSTime
+MSTime
+
+#MSBrandTime - see equation 4.3
+popcorn %>% 
+  group_by(time, brand, ybar_grand) %>% 
+  summarize(n_timebrand = n(),
+         ybar_timebrand = mean(pop_rate)) %>% 
+  mutate(term  = n_timebrand*(ybar_timebrand - ybar_grand)^2) %>% 
+  ungroup() %>% 
+  summarize(MSTimeBrand = (sum(term) - MSTime*(2-1) - MSBrand*(2-1))/(4 - 1-1-1)) -> MSTimeBrand
+MSTimeBrand
+
+#MSE - see equation 4.4
+popcorn %>% 
+  group_by(time, brand) %>% 
+  summarize(n_ij = n(),
+            s2_ij = var(pop_rate)) %>% 
+  mutate(term  = (n_ij - 1)*s2_ij) %>% 
+  ungroup() %>% 
+  summarize(MSE = sum(term)/sum(n_ij - 1))
+```
+
+## Question 11
+
+```{r}
+
+```
+
+## Question 12
+
+> YOUR ANSWER HERE
+
+## Question 13
+
+Fit an appropriate anova model and view the results.
+
+```{r}
+
+```
+
+## Question 14
+
+> YOUR ANSWER HERE
+
+## Question 15
+
+```{r}
+
+```
+
+## Question 16
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 17
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 18
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 19
+
+> YOUR ANSWER HERE

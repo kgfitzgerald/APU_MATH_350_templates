@@ -1,5 +1,5 @@
 ---
-title: "Homework Chapter 2"
+title: "Homework Chapter 1"
 author: "Your Name Here"
 format: 
   html:
@@ -17,16 +17,18 @@ editor_options:
 
 ## Instructions
 
-This Homework comes from Chapter 2 of the Textbook. You should refer to AE_CH2 for some template code.
+This Homework comes from Chapter 1 of the Textbook. You should refer to AE_CH1 for some template code.
 
 Complete the following exercises:
 
+-   E.1
 -   E.2
+-   E.3
 -   E.4
--   E.6
--   E.7
--   E.8
--   E.13 (skip part d)
+-   E.10
+-   E.11
+-   E.13
+-   E.14
 
 ```{r}
 #| label: load-packages
@@ -39,7 +41,15 @@ library(infer)
 library(broom)
 ```
 
+## E.1
+
+> YOUR ANSWER HERE
+
 ## E.2
+
+> YOUR ANSWER HERE
+
+## E.3
 
 > YOUR ANSWER HERE
 
@@ -47,109 +57,27 @@ library(broom)
 
 > YOUR ANSWER HERE
 
-## E.6
+## E.10
+
+> YOUR ANSWER HERE
+
+## E.11
 
 ```{r}
-#| label: load-data2
+#| label: load-data
 #| message: false
 #| warning: false
 
-games2 <- read_csv("./data/C2 Games2.csv") %>% 
+mice <- read_csv("./data/C1 Mice.csv") %>% 
   clean_names()
 ```
 
 ### Part a
 
-```{r}
-#plot the data
-
-```
-
-> YOUR ANSWER HERE
-
-### Part b
-
-```{r}
-#conduct ANOVA
-
-```
-
-> YOUR ANSWER HERE
-
-### Part c
-
-```{r}
-#residual plot
-
-```
-
-> YOUR ANSWER HERE
-
-### Part d
-
-> YOUR ANSWER HERE
-
-### Part e
-
-> YOUR ANSWER HERE
-
-## E.7
-
-### Part a
-
-> YOUR ANSWER HERE
-
-### Part b
-
-```{r}
-#graph data
-```
-
-> YOUR ANSWER HERE
-
-### Part c
-
-```{r}
-#conduct ANOVA
-```
-
-> YOUR ANSWER HERE
-
-### Part d
-
-```{r}
-#show equal variance violated
-
-#create variable for log(Strength). Note, by default in R, log() computes the natural log
-
-#conduct ANOVA with log(Strength) as outcome
-
-
-```
-
-> YOUR ANSWER HERE
-
-### Part e
+*Modify the code from the Q7 - Q9 section of AE-CH1*
 
 ```{r}
 
-```
-
-> YOUR ANSWER HERE
-
-### Part f
-
-> YOUR ANSWER HERE
-
-### Part g
-
-> YOUR ANSWER HERE
-
-## E.8
-
-### Part a
-
-```{r}
 
 ```
 
@@ -159,36 +87,20 @@ games2 <- read_csv("./data/C2 Games2.csv") %>%
 
 ```{r}
 
+
 ```
-
-> YOUR ANSWER HERE
-
-### Part c
-
-> YOUR ANSWER HERE
-
-### Part d
 
 > YOUR ANSWER HERE
 
 ## E.13
 
-\[Read Section 2.9 before completing this exercise\]
-
-```{r}
-#| label: load-data3
-#| message: false
-#| warning: false
-
-weights <- read_csv("./data/C2 Weights.csv") %>% 
-  clean_names()
-```
-
 ### Part a
 
 ```{r}
 
 ```
+
+> YOUR ANSWER HERE
 
 ### Part b
 
@@ -196,13 +108,33 @@ weights <- read_csv("./data/C2 Weights.csv") %>%
 
 ```
 
+> YOUR ANSWER HERE
+
+## E.14
+
+### Part a
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+### Part b
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
 ### Part c
 
 ```{r}
 
 ```
 
-\[skip part d\]
+> YOUR ANSWER HERE
 
 ## Reflection prompts
 
