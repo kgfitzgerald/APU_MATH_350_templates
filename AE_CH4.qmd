@@ -25,6 +25,7 @@ This Application Exercise walks through the guided activities in Chapter 4 of th
 library(tidyverse)
 library(janitor)
 library(broom)
+library(cowplot)
 ```
 
 ```{r}
@@ -70,7 +71,7 @@ popcorn <- read_csv("./data/C4 Popcorn.csv") %>%
 
 ## Questions 8 - 10
 
-[Already completed for you]. The following code calculates the three measures of between-group variability (MSBrand, MSTime, MSBrandTime), and the within-group variability MSE. See Equations 4.1 - 4.4.
+\[Already completed for you\]. The following code calculates the three measures of between-group variability (MSBrand, MSTime, MSBrandTime), and the within-group variability MSE. See Equations 4.1 - 4.4.
 
 ```{r}
 popcorn %>% 
@@ -127,6 +128,82 @@ popcorn %>%
 ## Question 12
 
 > YOUR ANSWER HERE
+
+## Interaction plot (Fig 4.2)
+
+```{r}
+#interaction plot
+popcorn %>% 
+  group_by(time, brand) %>% 
+  summarize(mean = mean(pop_rate)) %>% 
+  ggplot(aes(y = mean, x = time, 
+             group = brand, color = brand)) +
+  geom_point() +
+  geom_line() +
+  labs(x = "Cook time",
+       y = "Average pop rate",
+       title = "Interaction Plot") +
+  scale_color_viridis_d() +
+  theme_minimal()
+```
+
+## Main Effects plot
+
+```{r}
+#main effects plot
+
+
+#main effects plot for microwave factor
+popcorn %>% 
+  group_by(microwave) %>% 
+  summarize(mean = mean(pop_rate)) %>% 
+  ggplot(aes(y = mean, x = microwave,
+             group = 1)) +
+  geom_point() +
+  geom_line() +
+  ylim(78, 85) +
+  labs(x = "level",
+       y = "Average pop rate")
+
+#create a generic function to create a main effects plot
+#for any data & explanatory/response variable
+main_effects_plot <- function(data, 
+                              explanatory_variable, 
+                              response_variable,
+                              ylimits,
+                              labels){
+  data %>% 
+    #!!sym() is just the syntax used to pass a string 
+    #to a variable name to be used in a tidyverse fxn
+    group_by(!!sym(explanatory_variable)) %>% 
+    summarize(mean = mean(!!sym(response_variable))) %>% 
+    ggplot(aes(y = mean, x = !!sym(explanatory_variable),
+             group = 1)) +
+    geom_point() +
+    geom_line() +
+    ylim(ylimits[1], ylimits[2]) +
+    labs(x = labels[1],
+         y = labels[2])
+}
+#create main effects plot for microwave factor
+#(and save as object p1)
+p1 <- main_effects_plot(popcorn, "microwave", "pop_rate",
+                  c(75, 85),
+                  c("level", "Average pop rate"))
+
+#create main effects plot for brand factor
+#(and save as object p2)
+p2 <- main_effects_plot(popcorn, "brand", "pop_rate",
+                  c(75, 85),
+                  c("level", "Average pop rate"))
+#create main effects plot for time factor
+#(and save as object p3)
+p3 <- main_effects_plot(popcorn, "time", "pop_rate",
+                  c(75, 85),
+                  c("level", "Average pop rate"))
+#use plot_grid() from cowplot package to arrange several plots
+plot_grid(p1, p2, p3, nrow = 1)
+```
 
 ## Question 13
 
