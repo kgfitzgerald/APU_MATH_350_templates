@@ -29,7 +29,7 @@ Complete the following exercises:
 
 -   E.4
 
--   Choose THREE of E.5 - E.11 to complete. Each uses a different data set you haven't yet analyzed - choose the three that are most interesting to you. 
+-   Choose THREE of E.5 - E.11 to complete. Each uses a different data set you haven't yet analyzed - choose the three that are most interesting to you.
 
 ```{r}
 #| label: load-packages
@@ -103,19 +103,15 @@ $$y_{ijkl} = \mu + ...$$
 
 *Type your answer using LaTeX (initialize and close formulas/math notation with double dollar signs). See LaTeX cheat sheet on Canvas (under Important Links), and/or Google for things you don't know the syntax for!*
 
-$$SS_C = $$
-$$SS_{BC} = $$
-$$MS_C = $$
+$$SS_C = $$ $$SS_{BC} = $$ $$MS_C = $$
 
-$$MS_{BC} = $$
-$$F =$$
+$$MS_{BC} = $$ $$F =$$
 
 #### Part c
 
 ```{r}
 
 ```
-
 
 #### Part d
 
@@ -130,7 +126,6 @@ $$F =$$
 ## CHOSEN PROBLEM 2
 
 ## CHOSEN PROBLEM 3
-
 
 ## Reflection prompts
 
