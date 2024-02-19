@@ -1,0 +1,205 @@
+---
+title: "AE-CH5"
+author: "Your Name Here"
+format: 
+  html:
+    self-contained: true
+    toc: true
+    toc_float: true
+    number_section: false
+    highlight: "tango"
+    theme: "cosmo"
+    df-print: paged
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+This Application Exercise walks through the guided activities in Chapter 5 of the textbook. There are spaces for you to answer each question (with code and/or text). Feel free to also use this document to add your own notes along the way.
+
+```{r}
+#| label: load-packages
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(janitor)
+library(broom)
+library(cowplot)
+library(lme4)
+```
+
+```{r}
+#| label: load-data
+#| message: false
+#| warning: false
+
+memory <- read_csv("./data/C5 Memory.csv") %>% 
+  clean_names()
+```
+
+## Question 1
+
+### Part a
+
+$$
+H_0: \alpha_1 = \alpha_2
+$$
+
+$$
+H_A: \alpha_1 \neq \alpha_2
+$$
+
+$$
+H_0: \beta_1 = \beta_2
+$$
+
+$$
+H_A: \beta_1 \neq \beta_2
+$$
+
+$$
+H_0: (\alpha\beta)_{11} = (\alpha\beta)_{12} = (\alpha\beta)_{21} = (\alpha\beta)_{22}
+$$
+
+$$
+H_A: \text{at least one } (\alpha\beta)_{ij} \text{ differs}
+$$
+
+### Part b
+
+```{r}
+m1 <- aov(lm(score ~ wordlist*distracter,
+               data = memory))
+tidy(m1)
+```
+
+### Part c
+
+```{r}
+#individual value plot
+ggplot(memory, aes(x = wordlist, 
+                   y = score)) +
+  facet_wrap(~distracter) +
+  geom_point()
+
+#residuals
+memory <- memory %>% 
+  mutate(residuals = m1$residuals)
+
+ggplot(memory, aes(x = residuals)) +
+  geom_histogram(color = "white",
+                 bins = 10)
+```
+
+### Part d
+
+```{r}
+main_effects_plot <- function(data, 
+                              explanatory_variable, 
+                              response_variable){
+  data %>% 
+    #!!sym() is just the syntax used to pass a string 
+    #to a variable name to be used in a tidyverse fxn
+    group_by(!!sym(explanatory_variable)) %>% 
+    summarize(mean = mean(!!sym(response_variable))) %>% 
+    ggplot(aes(y = mean, x = !!sym(explanatory_variable),
+             group = 1)) +
+    geom_point() +
+    geom_line() +
+    theme_minimal()
+}
+
+p1 <- main_effects_plot(memory, "wordlist", "score") + ylim(7, 9)
+p2 <- main_effects_plot(memory, "distracter", "score") + ylim(7, 9)
+plot_grid(p1, p2)
+
+#interaction plot
+memory %>% 
+  group_by(wordlist, distracter) %>% 
+  summarize(mean = mean(score)) %>% 
+  ggplot(aes(y = mean, x = wordlist, 
+             group = distracter, 
+             color = distracter)) +
+  geom_point() +
+  geom_line() +
+  labs(x = "Word list type",
+       y = "Memory score",
+       title = "Interaction Plot") +
+  scale_color_viridis_d() +
+  theme_minimal()
+```
+
+> YOUR ANSWER HERE
+
+## Question 2
+
+### Part a
+
+```{r}
+memory <- memory %>% 
+  mutate(student = factor(student))
+m2 <- aov(lm(score ~ wordlist*distracter + student,
+               data = memory))
+tidy(m2)
+```
+
+> YOUR ANSWER HERE
+
+### Part b
+
+> YOUR ANSWER HERE
+
+### Part c
+
+```{r}
+p1 <- main_effects_plot(memory, "wordlist", "score") + ylim(5,12)
+p2 <- main_effects_plot(memory, "distracter", "score") + ylim(5,12)
+p3 <- main_effects_plot(memory, "student", "score") + ylim(5,12)
+plot_grid(p1, p2, p3)
+
+```
+
+### Part d
+
+```{r}
+memory <- memory %>% 
+  mutate(residuals_m2 = m2$residuals)
+
+ggplot(memory, aes(x = residuals_m2)) +
+  geom_histogram(color = "white",
+                 bins = 10)
+```
+
+## Question 3
+
+> YOUR ANSWER HERE
+
+## Question 4
+
+> YOUR ANSWER HERE
+
+## Question 5
+
+> YOUR ANSWER HERE
+
+## Question 6
+
+> YOUR ANSWER HERE
+
+## Question 7
+
+```{r}
+memory <- memory %>% 
+  mutate(student2 = factor(student2))
+m3 <- lmer(score ~ wordlist*distracter + (1|major/student2),
+           data = memory)
+anova(m3)
+m4 <- aov(lm(score ~ wordlist*distracter + major + student2,
+           data = memory))
+tidy(m4)
+
+m5 <- aov(score ~ wordlist*distracter + Error(major/student2),
+           data = memory)
+tidy(m5)
+```

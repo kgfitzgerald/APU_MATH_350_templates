@@ -1,0 +1,137 @@
+---
+title: "AE-CH7"
+author: "Your Name Here"
+format: 
+  html:
+    self-contained: true
+    toc: true
+    toc_float: true
+    number_section: false
+    highlight: "tango"
+    theme: "cosmo"
+    df-print: paged
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+This Application Exercise walks through the guided activities in Chapter 7 of the textbook. There are spaces for you to answer each question (with code and/or text). Feel free to also use this document to add your own notes along the way.
+
+## Load packages & data
+
+```{r}
+#| label: load-packages-data
+#| message: false
+#| warning: false
+
+```
+
+
+## Question 1
+
+## Question 2
+
+```{r}
+
+```
+
+## Question 3
+
+```{r}
+
+```
+
+What's the problem with these predictions? 
+
+[Skip Q4 - done in class together]
+
+## Question 5
+
+```{r}
+
+```
+
+
+## Question 6
+
+```{r}
+
+```
+
+## Question 7
+
+$$\hat{\pi}_i = \frac{e^{b_0+b_1x_i}}{1 + e^{b_0+b_1x_i}}$$
+
+```{r}
+
+```
+
+## Question 8
+
+```{r}
+
+```
+
+
+## Question 9
+
+```{r}
+
+```
+
+## Question 10
+
+
+## Question 11
+
+```{r}
+
+```
+
+## Question 12
+
+```{r}
+
+```
+
+
+## Question 13
+
+```{r}
+
+```
+
+
+## Question 14
+
+```{r}
+
+```
+
+## Question 15
+
+```{r}
+
+```
+
+
+## Question 16
+
+```{r}
+
+```
+
+
+## Question 17
+
+```{r}
+
+```
+
+
+## Question 18
+
+```{r}
+
+```
+
