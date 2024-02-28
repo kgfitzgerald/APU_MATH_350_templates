@@ -1,0 +1,237 @@
+---
+title: "Homework Chapter 7"
+author: "Your Name Here"
+format: 
+  html:
+    self-contained: true
+    toc: true
+    toc_float: true
+    number_section: false
+    highlight: "tango"
+    theme: "cosmo"
+    df-print: paged
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## Instructions
+
+This Homework comes from Chapter 7 of the Textbook. You should refer to AE_CH7 for some template code.
+
+Complete the following exercises:
+
+-   E.2 (skip part e & f)
+
+-   E.5
+
+-   E.6 (a-c)
+
+-   E.9 (a - c)
+
+-   E.10
+
+```{r}
+#| label: load-packages
+#| message: false
+#| warning: false
+
+```
+
+## E.2
+
+#### Part a
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part c
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part d
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part g
+
+> YOUR ANSWER HERE
+
+## E.5
+
+#### Part a
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part c
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part d
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part e
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## E.6
+
+#### Part a
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part c
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## E.9
+
+#### Part a
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part c
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## E.10
+
+#### Part a
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part c
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part d
+
+> YOUR ANSWER HERE
+
+#### Part e
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part f
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part g
+
+> YOUR ANSWER HERE
+
+## Reflection prompts
+
+*Respond to each of the following after you have completed all exercises in this assignment*
+
+*(RP1): What were the main concepts covered in this assignment?*
+
+> YOUR ANSWER HERE
+
+*(RP2): What's one thing you understand better after completing these exercises?*
+
+> YOUR ANSWER HERE
+
+*(RP3): What exercise(s) gave you the most trouble? What was difficult about them/where did you get stuck?*
+
+> YOUR ANSWER HERE
