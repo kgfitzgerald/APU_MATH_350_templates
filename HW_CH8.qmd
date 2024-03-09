@@ -1,0 +1,308 @@
+---
+title: "AE-CH8 / HW-CH8"
+author: "Your Name Here"
+format: 
+  html:
+    self-contained: true
+    toc: true
+    toc_float: true
+    number_section: false
+    highlight: "tango"
+    theme: "cosmo"
+    df-print: paged
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+This Application Exercise walks through the guided activities in Chapter 8 of the textbook. There are spaces for you to answer each question (with code and/or text). Feel free to also use this document to add your own notes along the way.
+
+## Load packages & data
+
+```{r}
+#| label: load-packages-data
+#| message: false
+#| warning: false
+library(tidyverse)
+```
+
+# Cancer data
+
+## Question 1
+
+```{r}
+
+```
+
+## Question 2
+
+```{r}
+
+```
+
+## Question 3
+
+```{r}
+
+```
+
+## Question 4
+
+```{r}
+
+```
+
+## Question 5
+
+> YOUR ANSWER HERE
+
+## Question 6
+
+> YOUR ANSWER HERE
+
+## Question 7
+
+> YOUR ANSWER HERE
+
+## Question 8
+
+> YOUR ANSWER HERE
+
+## Question 9
+
+```{r}
+years <- 25
+n <- 1138
+person_years <- n*years
+incidence_rate <- 326/100000
+
+#simulate cases for a single neighborhood
+rbinom(1, size = person_years, prob = incidence_rate)
+
+#simulate 10,000 neighborhoods
+
+#view summary of simulations
+#sanity check- should get mean & median around 93
+
+#plot simulations
+
+#compute p-value
+```
+
+## Question 10
+
+```{r}
+
+```
+
+
+## Skip 11 - 14
+
+## Question 15
+
+```{r}
+
+```
+
+## Question 16
+
+```{r}
+
+```
+
+## Question 17
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 18
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 19
+
+```{r}
+
+```
+
+## Question 20
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 21
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 22
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 23
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 24
+
+> YOUR ANSWER HERE
+
+## Question 25
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 26
+
+> YOUR ANSWER HERE
+
+## Question 27
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 28
+
+## Question 29
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 30
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 31
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 32
+
+> YOUR ANSWER HERE
+
+## Question 33
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+
+## Question 34
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+# Galapagos
+
+## Question 50
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 51
+
+```{r}
+
+```
+
+## Question 52
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 53
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 54
+
+> YOUR ANSWER HERE
+
+## Question 55
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 56
+
+> YOUR ANSWER HERE
+
+## Question 57
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 58
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## Question 59
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
