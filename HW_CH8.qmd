@@ -52,7 +52,13 @@ library(tidyverse)
 
 ```
 
+> YOUR ANSWER HERE
+
 ## Question 5
+
+```{r}
+
+```
 
 > YOUR ANSWER HERE
 
@@ -94,7 +100,6 @@ rbinom(1, size = person_years, prob = incidence_rate)
 ```{r}
 
 ```
-
 
 ## Skip 11 - 14
 
@@ -226,7 +231,6 @@ rbinom(1, size = person_years, prob = incidence_rate)
 
 > YOUR ANSWER HERE
 
-
 ## Question 34
 
 ```{r}
@@ -293,6 +297,10 @@ rbinom(1, size = person_years, prob = incidence_rate)
 
 ## Question 58
 
+*Hint: use family = "quasipoisson" to fit an over-dispersed Poisson model.*
+
+*Sanity check: R will output the deviance values for the regular (non-over-dispersed) model, so they should match those from Q53, but the coefficients should change*
+
 ```{r}
 
 ```
@@ -300,6 +308,7 @@ rbinom(1, size = person_years, prob = incidence_rate)
 > YOUR ANSWER HERE
 
 ## Question 59
+
 
 ```{r}
 
