@@ -1,0 +1,175 @@
+---
+title: "HW-CH9"
+author: "Your Name Here"
+format: 
+  html:
+    self-contained: true
+    toc: true
+    toc_float: true
+    number_section: false
+    highlight: "tango"
+    theme: "cosmo"
+    df-print: paged
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## Instructions
+
+This Homework comes from Chapter 9 of the Textbook. You should refer to AE_CH9 for some template code.
+
+Complete the following exercises:
+
+-   E.1 (can access pdfs through APU library website. You may also choose to find a more recent article that uses survival analysis)
+
+-   E.2
+
+-   E.3
+
+-   E.12 (only do `survdiff()` once - don't need log rank and Wilcoxen separately)
+
+-   E.13
+
+-   E.15 (a - c only)
+
+```{r}
+#| label: load-packages
+#| message: false
+#| warning: false
+
+```
+
+## E.1
+
+#### Part a
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+> YOUR ANSWER HERE
+
+#### Part c
+
+> YOUR ANSWER HERE
+
+#### Part d
+
+> YOUR ANSWER HERE
+
+
+## E.2
+
+#### Part a
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+> YOUR ANSWER HERE
+
+#### Part c
+
+> YOUR ANSWER HERE
+
+## E.3
+
+#### Part a
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+> YOUR ANSWER HERE
+
+#### Part c
+
+> YOUR ANSWER HERE
+
+## E.12
+
+#### Part a
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part c
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## E.13
+
+#### Part a
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+```{r}
+
+```
+
+
+## E.15
+
+#### Part a
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part c
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+
+
+## Reflection prompts
+
+*Respond to each of the following after you have completed all exercises in this assignment*
+
+*(RP1): What were the main concepts covered in this assignment?*
+
+> YOUR ANSWER HERE
+
+*(RP2): What's one thing you understand better after completing these exercises?*
+
+> YOUR ANSWER HERE
+
+*(RP3): What exercise(s) gave you the most trouble? What was difficult about them/where did you get stuck?*
+
+> YOUR ANSWER HERE

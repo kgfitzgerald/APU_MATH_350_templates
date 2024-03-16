@@ -1,0 +1,140 @@
+---
+title: "AE-CH9"
+author: "Your Name Here"
+format: 
+  html:
+    self-contained: true
+    toc: true
+    toc_float: true
+    number_section: false
+    highlight: "tango"
+    theme: "cosmo"
+    df-print: paged
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+This Application Exercise walks through the guided activities in Chapter 9 of the textbook. There are spaces for you to answer each question (with code and/or text). Feel free to also use this document to add your own notes along the way.
+
+## Load packages & data
+
+```{r}
+#| label: load-packages-data
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(janitor)
+library()
+melt <- read_csv("./data/C9 MeltingChipsJS.csv") %>% 
+  clean_names()
+```
+
+## Question 2
+
+> **event of interest**: 
+
+> **time-to-event random variable**: 
+
+> **beginning of time**: 
+
+> **scale for measuring time**:
+
+## Question 3
+
+How many melting times are complete? How many are censored? 
+
+```{r}
+#first fix poorly named column! 
+melt <- melt %>% 
+  mutate(complete = censor,
+         censored = if_else(complete == 0, 1, 0)) %>% 
+  select(-censor)
+
+#count of complete vs. incomplete
+
+```
+
+## Question 4
+
+$\hat{S}(25)_E$
+
+$\hat{S}(30)_E$
+
+$\hat{S}(40)_E$
+
+$\hat{S}(60)_E$
+
+## Question 5
+
+### Part a
+
+$\hat{S}(45)_E = $
+
+### Part b
+
+$\hat{S}(45)_E = $
+
+
+## Questions 6 - 13
+
+$m =$
+
+| Interval $i$ | $t_i$ | Time interval | $n_i$ | Number censored | $d_i$ | $\hat{p}_i$ | $1 - \hat{p}_i$ | $\hat{S}(t)_{KM}$ |
+|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+|0 | 0 | [0, 25) | | | | | | | 
+|1 | 25| [25, 30) | | | | | | |
+
+....
+
+
+## Question 14
+
+
+
+## Question 15
+
+```{r}
+
+```
+
+## Question 16
+
+```{r}
+
+```
+
+[Skip 17]
+
+## Question 18
+
+
+## Question 19
+
+```{r}
+
+```
+
+[Skip 20 - 24]
+
+## Question 25
+
+```{r}
+
+```
+
+[Skip 27 - 28]
+
+## Question 29
+
+```{r}
+
+```
+
+## Question 30
+
+## Question 31
+
+## Question 36
+
