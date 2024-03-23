@@ -1,0 +1,201 @@
+---
+title: "HW Bayes 02"
+author: "Your Name Here"
+format: 
+  html:
+    self-contained: true
+    toc: true
+    toc_float: true
+    number_section: false
+    highlight: "tango"
+    theme: "cosmo"
+    df-print: paged
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## Instructions
+
+This Homework comes from Chapters 1 & 2 of the [Bayes Rules! Textbook](https://www.bayesrulesbook.com/). You should complete this assignment after having read the full Chapters 1 & 2 in Week 12.
+
+### [Chapter 1 Exercises](https://www.bayesrulesbook.com/chapter-1#exercises):
+
+-   1.6
+
+-   1.8
+
+### [Chapter 2 Exercises:](https://www.bayesrulesbook.com/chapter-2#exercises-1)
+
+-   2.3
+
+-   2.6
+
+-   2.11
+
+-   2.13
+
+-   2.14
+
+-   2.18
+
+-   2.20
+
+-   2.21
+
+```{r}
+#| label: load-packages
+#| message: false
+#| warning: false
+
+```
+
+## 1.6
+
+#### Part a
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+> YOUR ANSWER HERE
+
+#### Part c
+
+> YOUR ANSWER HERE
+
+## 1.8
+
+#### Part a
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+> YOUR ANSWER HERE
+
+## 2.3
+
+#### Part a
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+> YOUR ANSWER HERE
+
+#### Part c
+
+> YOUR ANSWER HERE
+
+#### Part d
+
+> YOUR ANSWER HERE
+
+#### Part e
+
+> YOUR ANSWER HERE
+
+#### Part f
+
+> YOUR ANSWER HERE
+
+## 2.6
+
+> YOUR ANSWER HERE
+
+## 2.11
+
+#### Part a
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+#### Part c
+
+```{r}
+
+```
+
+> YOUR ANSWER HERE
+
+## 2.13
+
+#### Part a
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+```{r}
+#show your calculations
+```
+
+> YOUR ANSWER HERE
+
+#### Part c
+
+```{r}
+#show your calculations
+```
+
+> YOUR ANSWER HERE
+
+## 2.14
+
+#### Part a
+
+> YOUR ANSWER HERE
+
+#### Part b
+
+```{r}
+#show your calculations
+```
+
+> YOUR ANSWER HERE
+
+#### Part c
+
+> YOUR ANSWER HERE
+
+## 2.18
+
+```{r}
+
+```
+
+## 2.20
+
+```{r}
+
+```
+
+## 2.21
+
+```{r}
+
+```
+
+## Reflection prompts
+
+*Respond to each of the following after you have completed all exercises in this assignment*
+
+*(RP1): What were the main concepts covered in this assignment?*
+
+> YOUR ANSWER HERE
+
+*(RP2): What's one thing you understand better after completing these exercises?*
+
+> YOUR ANSWER HERE
+
+*(RP3): What exercise(s) gave you the most trouble? What was difficult about them/where did you get stuck?*
+
+> YOUR ANSWER HERE
