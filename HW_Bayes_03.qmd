@@ -80,7 +80,6 @@ This Homework comes from Chapters 3 & 8 of the [Bayes Rules! Textbook](https://w
 
 ```
 
-
 #### Part b
 
 > YOUR ANSWER HERE
@@ -97,7 +96,6 @@ This Homework comes from Chapters 3 & 8 of the [Bayes Rules! Textbook](https://w
 
 ```
 
-
 #### Part e
 
 > YOUR ANSWER HERE
@@ -105,7 +103,6 @@ This Homework comes from Chapters 3 & 8 of the [Bayes Rules! Textbook](https://w
 ```{r}
 
 ```
-
 
 ## 3.4
 
@@ -153,7 +150,6 @@ This Homework comes from Chapters 3 & 8 of the [Bayes Rules! Textbook](https://w
 
 ```
 
-
 ### Part c
 
 > YOUR ANSWER HERE
@@ -172,7 +168,7 @@ This Homework comes from Chapters 3 & 8 of the [Bayes Rules! Textbook](https://w
 
 > YOUR ANSWER HERE
 
-## 8.4 
+## 8.4
 
 ### Part a
 
