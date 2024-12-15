@@ -1,0 +1,43 @@
+---
+title: "AE-CH10"
+author: "Your Name Here"
+format: 
+  html:
+    self-contained: true
+    toc: true
+    toc_float: true
+    number_section: false
+    highlight: "tango"
+    theme: "cosmo"
+    df-print: paged
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+This Application Exercise walks through the guided activities in the [Bayes Rules! textbook](https://www.bayesrulesbook.com). There are spaces for you to answer each question (with code and/or text). Feel free to also use this document to add your own notes along the way.
+
+## Load packages & data
+
+```{r}
+#| label: load-packages-data
+#| message: false
+#| warning: false
+
+# Load packages
+library(bayesrules)
+library(tidyverse)
+library(janitor)
+
+# Import article data
+data(fake_news)
+```
+
+```{r}
+fake_news %>% 
+  tabyl(type) %>% 
+  adorn_totals("row")
+fake_news %>% 
+  tabyl(title_has_excl, type) %>% 
+  adorn_totals("row")
+```

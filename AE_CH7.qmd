@@ -26,7 +26,6 @@ This Application Exercise walks through the guided activities in Chapter 7 of th
 
 ```
 
-
 ## Question 1
 
 ## Question 2
@@ -41,24 +40,21 @@ This Application Exercise walks through the guided activities in Chapter 7 of th
 
 ```
 
-What's the problem with these predictions? 
+What's the problem with these predictions?
 
-[Skip Q4 - done in class together]
-
-## Question 5
-
-```{r}
-
-```
-
+\[Q4 - done in class together, skip Q5\]
 
 ## Question 6
+
+Calculate the MLE estimates of $\beta_0$ and $\beta_1$. Compare the MLE estimates to the OLS estimates in Q3.
 
 ```{r}
 
 ```
 
 ## Question 7
+
+Use the MLE estimates and the following equation to predict the probability that a launch has no O-ring damage when the temperature is 31, 50, and 75 degrees Fahrenheit.
 
 $$\hat{\pi}_i = \frac{e^{b_0+b_1x_i}}{1 + e^{b_0+b_1x_i}}$$
 
@@ -72,7 +68,6 @@ $$\hat{\pi}_i = \frac{e^{b_0+b_1x_i}}{1 + e^{b_0+b_1x_i}}$$
 
 ```
 
-
 ## Question 9
 
 ```{r}
@@ -80,7 +75,6 @@ $$\hat{\pi}_i = \frac{e^{b_0+b_1x_i}}{1 + e^{b_0+b_1x_i}}$$
 ```
 
 ## Question 10
-
 
 ## Question 11
 
@@ -94,13 +88,11 @@ $$\hat{\pi}_i = \frac{e^{b_0+b_1x_i}}{1 + e^{b_0+b_1x_i}}$$
 
 ```
 
-
 ## Question 13
 
 ```{r}
 
 ```
-
 
 ## Question 14
 
@@ -114,13 +106,11 @@ $$\hat{\pi}_i = \frac{e^{b_0+b_1x_i}}{1 + e^{b_0+b_1x_i}}$$
 
 ```
 
-
 ## Question 16
 
 ```{r}
 
 ```
-
 
 ## Question 17
 
@@ -128,10 +118,8 @@ $$\hat{\pi}_i = \frac{e^{b_0+b_1x_i}}{1 + e^{b_0+b_1x_i}}$$
 
 ```
 
-
 ## Question 18
 
 ```{r}
 
 ```
-
