@@ -24,11 +24,23 @@ This Application Exercise walks through the guided activities in Chapter 7 of th
 #| message: false
 #| warning: false
 
+library(tidyverse)
+library(janitor) #for clean_names()
+library(broom) #for tidy()
+library(cowplot) #for plot_grid()
+shuttle <- read_csv("./data/C7 Shuttle.csv") %>% 
+  clean_names()
 ```
 
 ## Question 1
 
+Explanatory:
+
+Response:
+
 ## Question 2
+
+Imagine you're an engineer working for Thiokol Corporation prior to January 1986. Create a few graphs of the `shuttle` data.
 
 ```{r}
 
@@ -94,32 +106,4 @@ $$\hat{\pi}_i = \frac{e^{b_0+b_1x_i}}{1 + e^{b_0+b_1x_i}}$$
 
 ```
 
-## Question 14
-
-```{r}
-
-```
-
-## Question 15
-
-```{r}
-
-```
-
-## Question 16
-
-```{r}
-
-```
-
-## Question 17
-
-```{r}
-
-```
-
-## Question 18
-
-```{r}
-
-```
+## 
